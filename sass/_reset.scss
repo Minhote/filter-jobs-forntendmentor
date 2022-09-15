@@ -1,0 +1,23 @@
+@use 'mixins' as *;
+@use 'variables' as *;
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'League Spartan', sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background-color: getColor(desaturated-dark-cyan);
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    padding: 6rem 0 2rem;
+}
