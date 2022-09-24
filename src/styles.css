@@ -12,11 +12,124 @@ html {
 }
 
 body {
-  background-color: hsl(180deg, 29%, 50%);
   display: flex;
   min-height: 100vh;
   justify-content: center;
   padding: 6rem 0 2rem;
+  background-image: linear-gradient(hsl(180deg, 29%, 50%) 20%, hsl(180deg, 52%, 96%) 80%);
+}
+
+.main {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5rem;
+}
+.main .card {
+  width: 100%;
+  padding: 1rem 2rem;
+  gap: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: hsl(180deg, 52%, 96%);
+  border-radius: 0.4rem;
+  box-shadow: 7px 9px 4px -1px hsl(180deg, 8%, 52%);
+}
+@media (max-width: 800px) {
+  .main .card {
+    flex-direction: column;
+    padding: 3rem 2rem;
+  }
+}
+.main .card.featured {
+  border-left: 4px solid hsl(180deg, 29%, 50%);
+}
+.main .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 0.5rem;
+  flex-grow: 1;
+}
+@media (max-width: 800px) {
+  .main .card-body {
+    align-items: center;
+  }
+}
+.main .card-body-title {
+  font-size: 1.5rem;
+  color: hsl(180deg, 29%, 50%);
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+@media (max-width: 800px) {
+  .main .card-body-title {
+    font-size: 2rem;
+  }
+  .main .card-body-title span {
+    font-size: 1.4rem;
+  }
+}
+.main .card-body-title-span-new {
+  padding: 0.2rem 0.7rem;
+  border-radius: 2rem;
+  text-transform: uppercase;
+  color: hsl(180deg, 52%, 96%);
+  background-color: hsl(180deg, 29%, 50%);
+  font-weight: bold;
+}
+.main .card-body-title-span-featured {
+  padding: 0.2rem 0.7rem;
+  border-radius: 2rem;
+  text-transform: uppercase;
+  color: hsl(180deg, 52%, 96%);
+  background-color: hsl(180deg, 14%, 20%);
+  font-weight: bold;
+}
+.main .card-body-position:hover {
+  color: hsl(180deg, 29%, 50%);
+}
+.main .card-body-description {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+}
+.main .card-body-description span {
+  color: hsl(180deg, 8%, 52%);
+  font-size: small;
+}
+.main .card-list {
+  flex-grow: 2;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 2.5rem;
+}
+@media (max-width: 800px) {
+  .main .card-list {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.main .card-list-item {
+  list-style: none;
+  color: hsl(180deg, 29%, 50%);
+  background-color: rgb(170, 250, 246);
+  font-weight: bold;
+  font-size: medium;
+  padding: 0.2rem 0.7rem;
+  border-radius: 0.4rem;
+}
+.main .card-list-item:hover {
+  color: hsl(180deg, 52%, 96%);
+  background-color: hsl(180deg, 29%, 50%);
 }
 
 /*# sourceMappingURL=styles.css.map */

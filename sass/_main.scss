@@ -1,0 +1,126 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+.main {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5rem;
+
+  .card {
+    width: 100%;
+    padding: 1rem 2rem;
+    gap: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: getColor("light-grayish-cyan-background");
+    border-radius: 0.4rem;
+    box-shadow: 7px 9px 4px -1px getColor("dark-grayish-cyan");
+
+    @include media(800px) {
+      flex-direction: column;
+      padding: 3rem 2rem;
+    }
+
+    &.featured {
+      border-left: 4px solid getColor("desaturated-dark-cyan");
+    }
+
+    &-body {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      gap: 0.5rem;
+      flex-grow: 1;
+
+      @include media(800px) {
+        align-items: center;
+      }
+
+      &-title {
+        font-size: 1.5rem;
+        color: getColor("desaturated-dark-cyan");
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+
+        @include media(800px) {
+          font-size: 2rem;
+
+          & span{
+            font-size: 1.4rem;
+          }
+        }
+
+        &-span-new {
+          padding: 0.2rem 0.7rem;
+          border-radius: 2rem;
+          text-transform: uppercase;
+          color: getColor("light-grayish-cyan-background");
+          background-color: getColor("desaturated-dark-cyan");
+          font-weight: bold;
+        }
+
+        &-span-featured {
+          padding: 0.2rem 0.7rem;
+          border-radius: 2rem;
+          text-transform: uppercase;
+          color: getColor("light-grayish-cyan-background");
+          background-color: getColor("very-dark-grayish-cyan");
+          font-weight: bold;
+        }
+      }
+
+      &-position {
+        &:hover {
+          color: getColor("desaturated-dark-cyan");
+        }
+      }
+
+      &-description {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 1rem;
+
+        & span {
+          color: getColor("dark-grayish-cyan");
+          font-size: small;
+        }
+      }
+    }
+
+    &-list {
+      flex-grow: 2;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 2.5rem;
+
+      @include media(800px) {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+      }
+
+      &-item {
+        list-style: none;
+        color: getColor("desaturated-dark-cyan");
+        background-color: rgb(170, 250, 246);
+        font-weight: bold;
+        font-size: medium;
+        padding: 0.2rem 0.7rem;
+        border-radius: 0.4rem;
+
+        &:hover {
+          color: getColor("light-grayish-cyan-background");
+          background-color: getColor("desaturated-dark-cyan");
+        }
+      }
+    }
+  }
+}

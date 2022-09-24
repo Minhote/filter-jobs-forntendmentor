@@ -3,3 +3,9 @@
 @function getColor($color){
     @return map-get($colors, $color)
 }
+
+@mixin media($query) {
+    @media (max-width: #{$query}) {
+        @content
+    }
+}
