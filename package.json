@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "![Design preview for the Job listings with filtering coding challenge](./design/desktop-preview.jpg)",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "sass": "sass ./sass/index.scss ./src/styles.css -w",
     "test": "echo \"Error: no test specified\" && exit 1"

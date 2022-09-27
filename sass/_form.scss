@@ -1,0 +1,70 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+.filter-container {
+  display: none;
+  width: 80%;
+  align-items: center;
+  justify-content: space-between;
+  background-color: getColor("light-grayish-cyan-background");
+  height: 5rem;
+  padding: 0 2rem;
+
+  &-bar {
+    width: 80%;
+    border-radius: 0.5rem;
+    padding: 0.2rem;
+    height: 60%;
+    border: 1px solid getColor("desaturated-dark-cyan");
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    &-div {
+      display: flex;
+      margin:  0 .5rem;
+
+      &:hover {
+        .filter-container-bar-div-item {
+          color: getColor("light-grayish-cyan-background");
+          background-color: getColor("desaturated-dark-cyan");
+        }
+        .filter-container-bar-div-item + i {
+          color: black;
+          background-color: getColor("dark-grayish-cyan");
+        }
+      }
+      &-item {
+        color: getColor("desaturated-dark-cyan");
+        background-color: rgb(170, 250, 246);
+        font-weight: bold;
+        font-size: medium;
+        padding: 0.3rem 0.5rem;
+        border-radius: 0.4rem 0 0 0.4rem;
+        position: relative;
+      }
+
+      & i {
+        color: getColor("light-grayish-cyan");
+        background-color: black;
+        border-radius: 0 0.4rem 0.4rem 0;
+        display: flex;
+        align-items: center;
+        padding: 0.2rem;
+      }
+    }
+  }
+
+  &-btn {
+    height: 60%;
+    border: none;
+    background-color: getColor("light-grayish-cyan-background");
+    color: getColor("desaturated-dark-cyan");
+    font-size: large;
+
+    &:hover {
+      cursor: pointer;
+      font-weight: bold;
+    }
+  }
+}
