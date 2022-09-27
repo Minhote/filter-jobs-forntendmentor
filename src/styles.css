@@ -13,10 +13,73 @@ html {
 
 body {
   display: flex;
+  flex-direction: column;
   min-height: 100vh;
   justify-content: center;
+  align-items: center;
+  gap: 2rem;
   padding: 6rem 0 2rem;
   background-image: linear-gradient(hsl(180deg, 29%, 50%) 20%, hsl(180deg, 52%, 96%) 80%);
+}
+
+.filter-container {
+  display: none;
+  width: 80%;
+  align-items: center;
+  justify-content: space-between;
+  background-color: hsl(180deg, 52%, 96%);
+  height: 5rem;
+  padding: 0 2rem;
+}
+.filter-container-bar {
+  width: 80%;
+  border-radius: 0.5rem;
+  padding: 0.2rem;
+  height: 60%;
+  border: 1px solid hsl(180deg, 29%, 50%);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.filter-container-bar-div {
+  display: flex;
+  margin: 0 0.5rem;
+}
+.filter-container-bar-div:hover .filter-container-bar-div-item {
+  color: hsl(180deg, 52%, 96%);
+  background-color: hsl(180deg, 29%, 50%);
+}
+.filter-container-bar-div:hover .filter-container-bar-div-item + i {
+  color: black;
+  background-color: hsl(180deg, 8%, 52%);
+}
+.filter-container-bar-div-item {
+  color: hsl(180deg, 29%, 50%);
+  background-color: rgb(170, 250, 246);
+  font-weight: bold;
+  font-size: medium;
+  padding: 0.3rem 0.5rem;
+  border-radius: 0.4rem 0 0 0.4rem;
+  position: relative;
+}
+.filter-container-bar-div i {
+  color: hsl(180deg, 31%, 95%);
+  background-color: black;
+  border-radius: 0 0.4rem 0.4rem 0;
+  display: flex;
+  align-items: center;
+  padding: 0.2rem;
+}
+.filter-container-btn {
+  height: 60%;
+  border: none;
+  background-color: hsl(180deg, 52%, 96%);
+  color: hsl(180deg, 29%, 50%);
+  font-size: large;
+}
+.filter-container-btn:hover {
+  cursor: pointer;
+  font-weight: bold;
 }
 
 .main {
